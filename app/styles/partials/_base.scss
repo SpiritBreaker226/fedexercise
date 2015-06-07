@@ -1,0 +1,11 @@
+$primary-colour: color("blue", 60) !default;
+$secondary-colour: #FFF !default;
+
+body {
+	color: $primary-colour;
+}
+
+header {
+	background-color: $primary-colour;
+	color: $secondary-colour;
+}
