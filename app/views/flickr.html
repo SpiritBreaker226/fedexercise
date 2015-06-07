@@ -7,8 +7,11 @@
 				<header>
 					<h3 class="flickr-container-row-photo-header">{{photo.title}}</h3>
 				</header>
+
 				<img ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" alt="{{photo.title}}">
 			</article>
+
+			<div ng-class="clearfix($index)"></div>
 		</div>
 	</div>
 </seciton>
