@@ -1,12 +1,16 @@
 'use strict';
 
+var app = angular.module('fedexerciseApp');
+
 /**
  * @ngdoc directive
  * @name fedexerciseApp.directive:flickr
  * @description
  * # flickr
  */
-angular.module('fedexerciseApp')
+app
+  .controller('flickrCRTL', function() {
+  })
   .directive('flickr', function () {
     return {
       templateUrl: 'views/flickr.html',
