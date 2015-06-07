@@ -4,3 +4,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 
 @import "vendor/ibm-colors";
+
+@import "partials/base";
+@import "partials/layout";
+
+@import "partials/flickr";
