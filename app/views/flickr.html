@@ -3,7 +3,7 @@
 
 	<div class="flickr-container-row">
 		<div ng-repeat="photo in photos">
-			<div class="col-md-12">
+			<div class="flickr-container-row-photo">
 				<div class="thumbnail">
 					<h3>{{photo.title}}</h3>
 					<img ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" alt="{{photo.title}}">
