@@ -1,3 +1,7 @@
 .flickr-container {
 	@extend .container;
 }
+
+.flickr-container-row {
+	@extend .row;
+}
