@@ -1,0 +1,24 @@
+.flickr-container {
+	@extend .container;
+}
+
+.flickr-container-row {
+	@extend .row;
+}
+
+.flickr-container-row-photo {
+	@extend .col-md-4, .col-sm-6, .col-xs-12;
+
+	header {
+		max-width: 500px;
+	}
+
+	img {
+		@extend .img-responsive;
+	}
+}
+
+.flickr-container-row-photo-header {
+	padding: 0.5em;
+	margin-bottom: 0;
+}

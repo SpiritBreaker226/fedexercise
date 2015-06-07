@@ -1,12 +1,17 @@
-<div class="container" ng-controller="flickrCRTL as flickr">
-	<div class="row">
+<section class="flickr-container" ng-controller="flickrCRTL as flickr">
+	<h2>Flickr Photos</h2>
+
+	<div class="flickr-container-row">
 		<div ng-repeat="photo in photos">
-			<div class="col-md-12">
-				<div class="thumbnail">
-					<h3>{{photo.title}}</h3>
-					<img ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" alt="{{photo.title}}">
-				</div>
-			</div>
-		</div> 
+			<article class="flickr-container-row-photo">
+				<header>
+					<h3 class="flickr-container-row-photo-header">{{photo.title}}</h3>
+				</header>
+
+				<img ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" alt="{{photo.title}}">
+			</article>
+
+			<div ng-class="clearfix($index)"></div>
+		</div>
 	</div>
-</div>
+</seciton>
