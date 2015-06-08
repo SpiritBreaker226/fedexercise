@@ -2,13 +2,19 @@
 	<h2>Flickr Photos</h2>
 
 	<div class="flickr-container-row">
-		<div class="col-md-12">
+		<div class="col-md-6">
 			<input placeholder="Search by title" autofocus ng-model="query" class="form-control">
+		</div>
+		<div class="col-md-6">
+			<select ng-model="photoOrder" class="form-control">
+				<option value="title">Title (A-Z)</option>
+				<option value="-title">Title (Z-A)</option>
+			</select>
 		</div>
 	</div>
 
 	<div class="flickr-container-row">
-		<div ng-repeat="photo in photos | filter: query">
+		<div ng-repeat="photo in photos | filter: query | orderBy: photoOrder">
 			<article class="flickr-container-row-photo">
 				<header>
 					<h3 class="flickr-container-row-photo-header">{{photo.title}}</h3>

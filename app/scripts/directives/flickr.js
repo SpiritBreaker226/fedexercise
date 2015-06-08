@@ -14,6 +14,8 @@ app
       $scope.photos = data.photos.photo;
     });
 
+    $scope.photoOrder = 'title';
+
     $scope.clearfix = function(photoIndex) {
       if ((photoIndex % 3) === 2) {
         return 'visible-lg-block visible-md-block clearfix';
