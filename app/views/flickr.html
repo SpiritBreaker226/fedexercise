@@ -1,12 +1,12 @@
 <section class="flickr-container" ng-controller="flickrCRTL as flickr">
 	<h2>Flickr Photos</h2>
 
-	<div class="flickr-container-row">
-		<div class="col-md-6">
-			<input placeholder="Search by title" autofocus ng-model="query" class="form-control">
+	<div class="flickr-container-row search-sorting-row">
+		<div class="search-sorting-row-input search-input-row">
+			<input placeholder="Search by title" autofocus ng-model="query">
 		</div>
-		<div class="col-md-6">
-			<select ng-model="photoOrder" class="form-control">
+		<div class="search-sorting-row-input">
+			<select ng-model="photoOrder">
 				<option value="title">Title (A-Z)</option>
 				<option value="-title">Title (Z-A)</option>
 			</select>

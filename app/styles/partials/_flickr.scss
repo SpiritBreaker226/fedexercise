@@ -22,3 +22,20 @@
 	padding: 0.5em;
 	margin-bottom: 0;
 }
+
+.search-sorting-row {
+	margin-top: 1em;
+	
+	.search-sorting-row-input {
+		@extend .col-md-6;
+
+		input,
+		select {
+			@extend .form-control;
+		}
+	}
+
+	.search-input-row {
+		margin-bottom: 1em;	
+	}
+}
