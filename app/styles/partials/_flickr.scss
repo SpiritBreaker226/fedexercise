@@ -4,6 +4,8 @@
 
 .flickr-container-row {
 	@extend .row;
+
+	margin-top: 1em;
 }
 
 .flickr-container-row-photo {
@@ -26,8 +28,6 @@
 }
 
 .search-sorting-row {
-	margin-top: 1em;
-	
 	.search-sorting-row-input {
 		@extend .col-md-6;
 
