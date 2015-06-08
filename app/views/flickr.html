@@ -2,7 +2,13 @@
 	<h2>Flickr Photos</h2>
 
 	<div class="flickr-container-row">
-		<div ng-repeat="photo in photos">
+		<div class="col-md-12">
+			<input placeholder="Search by title" autofocus ng-model="query" class="form-control">
+		</div>
+	</div>
+
+	<div class="flickr-container-row">
+		<div ng-repeat="photo in photos | filter: query">
 			<article class="flickr-container-row-photo">
 				<header>
 					<h3 class="flickr-container-row-photo-header">{{photo.title}}</h3>
