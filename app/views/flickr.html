@@ -1,8 +1,20 @@
 <section class="flickr-container" ng-controller="flickrCRTL as flickr">
 	<h2>Flickr Photos</h2>
 
+	<div class="flickr-container-row search-sorting-row">
+		<div class="search-sorting-row-input search-input-row">
+			<input placeholder="Search by title" autofocus ng-model="query">
+		</div>
+		<div class="search-sorting-row-input">
+			<select ng-model="photoOrder">
+				<option value="title">Title (A-Z)</option>
+				<option value="-title">Title (Z-A)</option>
+			</select>
+		</div>
+	</div>
+
 	<div class="flickr-container-row">
-		<div ng-repeat="photo in photos">
+		<div ng-repeat="photo in photos | filter: query | orderBy: photoOrder">
 			<article class="flickr-container-row-photo">
 				<header>
 					<h3 class="flickr-container-row-photo-header">{{photo.title}}</h3>
