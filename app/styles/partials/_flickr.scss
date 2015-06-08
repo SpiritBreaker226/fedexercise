@@ -4,10 +4,14 @@
 
 .flickr-container-row {
 	@extend .row;
+
+	margin-top: 1em;
 }
 
 .flickr-container-row-photo {
 	@extend .col-md-4, .col-sm-6, .col-xs-12;
+
+	margin-bottom: 2em;
 
 	header {
 		max-width: 500px;
@@ -20,22 +24,18 @@
 
 .flickr-container-row-photo-header {
 	padding: 0.5em;
-	margin-bottom: 0;
+	margin: 0;
 }
 
 .search-sorting-row {
-	margin-top: 1em;
-	
 	.search-sorting-row-input {
 		@extend .col-md-6;
+
+		margin-bottom: 1em;
 
 		input,
 		select {
 			@extend .form-control;
 		}
-	}
-
-	.search-input-row {
-		margin-bottom: 1em;	
 	}
 }
