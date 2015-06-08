@@ -29,13 +29,11 @@
 	.search-sorting-row-input {
 		@extend .col-md-6;
 
+		margin-bottom: 2em;
+
 		input,
 		select {
 			@extend .form-control;
 		}
-	}
-
-	.search-input-row {
-		margin-bottom: 1em;	
 	}
 }
