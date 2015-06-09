@@ -3,6 +3,7 @@
 describe('Service: flickrFactory', function () {
   var flickrFactory;
   var httpBackend;
+  var flickrFunctionToTest;
 
   // load the service's module
   beforeEach(function() {
@@ -21,6 +22,8 @@ describe('Service: flickrFactory', function () {
   afterEach(function() {
     httpBackend.verifyNoOutstandingExpectation();
     httpBackend.verifyNoOutstandingRequest();
+
+    flickrFunctionToTest = "";
   });
 
   it('should return 200 and response with list of photos', function() {
@@ -56,9 +59,11 @@ describe('Service: flickrFactory', function () {
       }
     };
 
+    flickrFunctionToTest = "flickr.people.getPublicPhotos";
+
     // expectGET to make sure this is called once.
     httpBackend.expectGET('https://api.flickr.com/services/rest/' + 
-      '?method=flickr.people.getPublicPhotos' + 
+      '?method=' + flickrFunctionToTest + 
       '&api_key=a5e95177da353f58113fd60296e1d250' + 
       '&user_id=132365033@N08' + 
       '&format=json' + 
@@ -66,7 +71,7 @@ describe('Service: flickrFactory', function () {
     ).respond(returnData);
     
     // make the call.
-    var returnedPromise = flickrFactory.callFlickrFunctions('flickr.people.getPublicPhotos');
+    var returnedPromise = flickrFactory.callFlickrFunctions(flickrFunctionToTest);
     
     // set up a handler for the response, that will put the result
     // into a variable in this scope for you to test.
