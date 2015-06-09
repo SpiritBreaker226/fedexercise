@@ -9,7 +9,7 @@ var app = angular.module('fedexerciseApp');
  * # flickr
  */
 app
-  .controller('flickrCRTL', function($scope, flickrFactory) {
+  .controller('flickrCrtl', function($scope, flickrFactory) {
     flickrFactory.callFlickrFunctions('flickr.people.getPublicPhotos').success(function(data) {
       $scope.photos = data.photos.photo;
     });
