@@ -14,13 +14,20 @@ angular.module('fedexerciseApp')
     var baseURI = 'https://api.flickr.com/services/rest/';
     
     return {
-      callFlickrFunctions: function (flickrMethod) {
+      callFlickrFunctions: function (flickrMethod, flickrMethodArguments) {
+        var extraUrlMethodArguments = '';
+
+        for(var flickrMethodArgName in flickrMethodArguments) {
+          extraUrlMethodArguments += '&' + flickrMethodArgName + '=' + flickrMethodArguments[flickrMethodArgName];
+        }
+
         return $http.get(baseURI + 
           '?method=' + flickrMethod + 
           '&api_key=' + apiKey + 
           '&user_id=' + userId + 
           '&format=json' + 
-          '&nojsoncallback=1', { 
+          '&nojsoncallback=1' +
+          extraUrlMethodArguments, { 
             cache: true 
           });
       }
