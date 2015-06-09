@@ -1,7 +1,8 @@
 'use strict';
 
 describe('Service: flickrFactory', function () {
-  var flickrFactory, httpBackend;
+  var flickrFactory;
+  var httpBackend;
 
   // load the service's module
   beforeEach(function() {
@@ -22,9 +23,38 @@ describe('Service: flickrFactory', function () {
     httpBackend.verifyNoOutstandingRequest();
   });
 
-  it('should getPhotos and return response excited: true', function() {
+  it('should return 200 and response with list of photos', function() {
     // set up some data for the http call to return and test later.
-    var returnData = { excited: true };
+    var returnData = {
+      photos: {
+        page: 1,
+        pages: 1,
+        perpage: 100,
+        total: "12",
+        photo: [
+          {
+            id: "17936160485",
+            owner: "132365033@N08",
+            server: "7738",
+            farm: 8,
+            title: "rhino",
+            ispublic: 1,
+            isfriend: 0,
+            isfamily: 0
+          },
+          {
+            id: "17936788061",
+            owner: "132365033@N08",
+            server: "7761",
+            farm: 8,
+            title: "gharial",
+            ispublic: 1,
+            isfriend: 0,
+            isfamily: 0
+          }
+        ]
+      }
+    };
 
     // expectGET to make sure this is called once.
     httpBackend.expectGET('https://api.flickr.com/services/rest/' + 
