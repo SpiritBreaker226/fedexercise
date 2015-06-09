@@ -72,7 +72,7 @@ describe('Service: flickrFactory', function () {
     // into a variable in this scope for you to test.
     var result;
     returnedPromise.then(function(response) {
-      result = response;
+      result = response.data;
     });
     
     // flush the backend to "execute" the request to do the expectedGET assertion.
