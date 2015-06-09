@@ -16,4 +16,4 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
+  ]);

@@ -23,7 +23,7 @@ describe('Service: flickrFactory', function () {
     httpBackend.verifyNoOutstandingExpectation();
     httpBackend.verifyNoOutstandingRequest();
 
-    flickrFunctionToTest = "";
+    flickrFunctionToTest = '';
   });
 
   it('should return 200 and response with list of photos', function() {
@@ -33,24 +33,24 @@ describe('Service: flickrFactory', function () {
         page: 1,
         pages: 1,
         perpage: 100,
-        total: "12",
+        total: '12',
         photo: [
           {
-            id: "17936160485",
-            owner: "132365033@N08",
-            server: "7738",
+            id: '17936160485',
+            owner: '132365033@N08',
+            server: '7738',
             farm: 8,
-            title: "rhino",
+            title: 'rhino',
             ispublic: 1,
             isfriend: 0,
             isfamily: 0
           },
           {
-            id: "17936788061",
-            owner: "132365033@N08",
-            server: "7761",
+            id: '17936788061',
+            owner: '132365033@N08',
+            server: '7761',
             farm: 8,
-            title: "gharial",
+            title: 'gharial',
             ispublic: 1,
             isfriend: 0,
             isfamily: 0
@@ -59,7 +59,7 @@ describe('Service: flickrFactory', function () {
       }
     };
 
-    flickrFunctionToTest = "flickr.people.getPublicPhotos";
+    flickrFunctionToTest = 'flickr.people.getPublicPhotos';
 
     // expectGET to make sure this is called once.
     httpBackend.expectGET('https://api.flickr.com/services/rest/' + 
@@ -80,7 +80,7 @@ describe('Service: flickrFactory', function () {
       result = response.data;
     });
     
-    // flush the backend to "execute" the request to do the expectedGET assertion.
+    // flush the backend to 'execute' the request to do the expectedGET assertion.
     httpBackend.flush();
     
     // check the result. 
